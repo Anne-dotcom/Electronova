@@ -43,7 +43,7 @@ export default function Contact() {
     <div className="container my-5">
       <h2 className="text-center mb-4 contact-heading">Contact Us</h2>
       <p className="text-center text-muted">
-        Have questions or need help? We'd love to hear from you!
+        Have questions or need help? We&apos;d love to hear from you!
       </p>
 
       <div className="row mt-5">
