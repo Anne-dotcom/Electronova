@@ -2,29 +2,32 @@
 "use client";
 import React, { useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Carousel as BootstrapCarousel } from "bootstrap";
 
 const Carousel = () => {
   useEffect(() => {
-    const carouselElement = document.querySelector("#heroCarousel");
-    new BootstrapCarousel(carouselElement, {
-      interval: 3000,
-      ride: "carousel",
-      pause: "hover",
-      wrap: true,
+    // Dynamically import Bootstrap JS only on the client
+    import("bootstrap").then(({ Carousel: BootstrapCarousel }) => {
+      const carouselElement = document.querySelector("#heroCarousel");
+      if (carouselElement) {
+        new BootstrapCarousel(carouselElement, {
+          interval: 3000,
+          ride: "carousel",
+          pause: "hover",
+          wrap: true,
+        });
+      }
     });
   }, []);
 
-  // Fixed height style for all slides
   const slideStyle = {
-    height: "500px", // You can adjust this height
+    height: "500px",
     objectFit: "cover",
     width: "100%",
   };
 
   return (
     <div id="heroCarousel" className="carousel slide">
-      {/* Carousel Indicators */}
+      {/* Indicators */}
       <div className="carousel-indicators">
         <button
           type="button"
