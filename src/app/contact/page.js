@@ -1,6 +1,11 @@
 "use client";
 import { useState } from "react";
-import { submitContactMessage } from "../../api/contact.js";
+
+// Dynamic import to avoid build-time issues
+const submitContactMessage = async (formData) => {
+  const { submitContactMessage: apiFunction } = await import("../../api/contact.js");
+  return apiFunction(formData);
+};
 
 export default function Contact() {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
