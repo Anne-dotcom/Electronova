@@ -12,7 +12,6 @@ export const submitContactMessage = async (messageData) => {
   try {
     const { name, email, message } = messageData;
 
-    // Validate required fields
     if (!name || !email || !message) {
       return {
         data: null,
@@ -20,7 +19,6 @@ export const submitContactMessage = async (messageData) => {
       };
     }
 
-    // Basic email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
       return {
@@ -38,15 +36,15 @@ export const submitContactMessage = async (messageData) => {
           message: message.trim()
         }
       ])
-      .select()
-      .single();
+      .select(); // ✅ works in v2
 
     if (error) {
       console.error('Error submitting contact message:', error);
       return { data: null, error };
     }
 
-    return { data, error: null };
+    // return just the inserted row
+    return { data: data?.[0] ?? null, error: null };
   } catch (err) {
     console.error('Unexpected error submitting contact message:', err);
     return { data: null, error: err };
