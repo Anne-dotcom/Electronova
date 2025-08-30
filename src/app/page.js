@@ -133,7 +133,7 @@ export default function Home() {
                       <span key={i} className="text-warning">★</span>
                     ))}
                   </div>
-                  <p className="card-text">&quot;The best electronics store I've ever shopped at. Fast delivery and great prices!&quot;</p>
+                  <p className="card-text">&quot;The best electronics store I have ever shopped at. Fast delivery and great prices!&quot;</p>
                   <footer className="blockquote-footer mt-3">Sarah Johnson</footer>
                 </div>
               </div>
