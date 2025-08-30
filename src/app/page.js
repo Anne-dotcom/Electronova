@@ -133,7 +133,7 @@ export default function Home() {
                       <span key={i} className="text-warning">★</span>
                     ))}
                   </div>
-                  <p className="card-text">"The best electronics store I've ever shopped at. Fast delivery and great prices!"</p>
+                  <p className="card-text">&quot;The best electronics store I've ever shopped at. Fast delivery and great prices!&quot;</p>
                   <footer className="blockquote-footer mt-3">Sarah Johnson</footer>
                 </div>
               </div>
@@ -146,7 +146,7 @@ export default function Home() {
                       <span key={i} className="text-warning">★</span>
                     ))}
                   </div>
-                  <p className="card-text">"Amazing customer service and the products are always top quality. Highly recommend!"</p>
+                  <p className="card-text">&quot;Amazing customer service and the products are always top quality. Highly recommend!&quot;</p>
                   <footer className="blockquote-footer mt-3">Michael Chen</footer>
                 </div>
               </div>
@@ -159,7 +159,7 @@ export default function Home() {
                       <span key={i} className="text-warning">★</span>
                     ))}
                   </div>
-                  <p className="card-text">"Their deals are unbeatable, and the products arrive in perfect condition every time."</p>
+                  <p className="card-text">&quot;Their deals are unbeatable, and the products arrive in perfect condition every time.&quot;</p>
                   <footer className="blockquote-footer mt-3">Emma Rodriguez</footer>
                 </div>
               </div>
